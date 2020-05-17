@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="fr" xml:lang="fr">
+<head>
+    <title>Tableau de bord</title>
+    <link rel="shortcut icon" href="https://moodle.ynov.com/theme/image.php/fordson/theme/1579011570/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, Tableau de bord" />
+<link rel="stylesheet" type="text/css" href="https://moodle.ynov.com/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://moodle.ynov.com/theme/styles.php/fordson/1579011570_1573569966/all" />
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/moodle.ynov.com","sesskey":"8pwqaHt6Us","themerev":"1579011570","slasharguments":1,"theme":"fordson","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1579011570","admin":"admin","svgicons":true,"usertimezone":"Europe\/Paris","contextid":129184};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/moodle.ynov.com\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/moodle.ynov.com\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/moodle.ynov.com\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/moodle.ynov.com\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/moodle.ynov.com\/theme\/yui_combo.php?m\/1579011570\/","combine":true,"comboBase":"https:\/\/moodle.ynov.com\/theme\/yui_combo.php?","ext":false,"root":"m\/1579011570\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-checknet":{"requires":["base-base","moodle-core-notification-alert","io-base"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-dock":{"requires":["base","node","event-custom","event-mouseenter","event-resize","escape","moodle-core-dock-loader","moodle-core-event"]},"moodle-core-dock-loader":{"requires":["escape"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-modchooser":{"requires":["moodle-core-chooserdialogue","moodle-course-coursebase"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-showadvanced":{"requires":["node","base","selector-css3"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-qbankmanager":{"requires":["node","selector-css3"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-qtype_ddimageortext-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-qtype_ddimageortext-form":{"requires":["moodle-qtype_ddimageortext-dd","form_filepicker"]},"moodle-qtype_ddmarker-dd":{"requires":["node","event-resize","dd","dd-drop","dd-constrain","graphics"]},"moodle-qtype_ddmarker-form":{"requires":["moodle-qtype_ddmarker-dd","form_filepicker","graphics","escape"]},"moodle-qtype_ddwtos-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_bigbluebuttonbn-rooms":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_bigbluebuttonbn-broker":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_bigbluebuttonbn-imports":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-modform":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-recordings":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_forum-subscriptiontoggle":{"requires":["base-base","io-base"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-block_xp-rulepicker"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_html-button":{"requires":["moodle-editor_atto-plugin","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/moodle.ynov.com\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/moodle.ynov.com\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1579011570\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/moodle.ynov.com\/lib\/javascript.php\/1579011570\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/moodle.ynov.com\/lib\/javascript.php\/1579011570\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.2\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body  id="page-my-index" class="format-site  path-my gecko dir-ltr lang-fr yui-skin-sam yui3-skin-sam moodle-ynov-com pagelayout-mydashboard course-1 context-129184 ">
+
+<div id="page-wrapper">
+
+    <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Passer au contenu principal</a>
+</div><script type="text/javascript" src="https://moodle.ynov.com/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script type="text/javascript" src="https://moodle.ynov.com/theme/jquery.php/core/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://moodle.ynov.com/lib/javascript.php/1579011570/lib/javascript-static.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+
+    <nav class="fixed-top navbar   navbar-expand moodle-has-zindex">
+            <div data-region="drawer-toggle" class="d-inline-block mr-3">
+                <button aria-expanded="false" aria-controls="nav-drawer" type="button" class="btn nav-link float-sm-left mr-1 btn-secondary" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav"><i class="icon fa fa-bars fa-fw " aria-hidden="true"  ></i><span class="sr-only">Panneau latéral</span></button>
+            </div>
+            <a href="https://moodle.ynov.com" class="navbar-brand 
+                    d-none d-sm-inline
+                    ">
+                <span class="site-name d-none d-md-inline">Moodle</span>
+            </a>
+            
+            <!-- course_controls -->
+            <div class="coursecontrols nav-item d-flex">
+                <div class="editcogbutton"><div class="pull-xs-right context-header-settings-menu"></div></div>
+                
+            </div>
+    
+            <ul class="navbar-nav d-none d-md-flex">
+                <!-- custom_menu -->
+                <li class="dropdown nav-item">
+    <a class="dropdown-toggle nav-link" id="drop-down-5e469eef138c35e469eeec7eaa7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" aria-controls="drop-down-menu-5e469eef138c35e469eeec7eaa7">
+        Mes modules
+    </a>
+    <div class="dropdown-menu" role="menu" id="drop-down-menu-5e469eef138c35e469eeec7eaa7" aria-labelledby="drop-down-5e469eef138c35e469eeec7eaa7">
+                <a class="dropdown-item" role="menuitem" href="https://moodle.ynov.com/my" title="Tableau de bord">Tableau de bord</a>
+                <a class="dropdown-item" role="menuitem" href="https://moodle.ynov.com/course/view.php?id=5723" title="1920/ Bx B1 info MP">B1 - info - mini projets</a>
+                <a class="dropdown-item" role="menuitem" href="https://moodle.ynov.com/course/view.php?id=5733" title="1920/ Bx B1 compétences transverses">B1 - info compétences transverses</a>
+                <a class="dropdown-item" role="menuitem" href="https://moodle.ynov.com/course/view.php?id=5702" title="1920/ Bx B1 Projet Infra SI">B1 - Projet infra SI</a>
+                <a class="dropdown-item" role="menuitem" href="https://moodle.ynov.com/course/view.php?id=5700" title="1920/ Bx B1 Projet Dev Logiciel">B1 - Projet Premier logiciel (dev logiciel)</a>
+                <a class="dropdown-item" role="menuitem" href="https://moodle.ynov.com/course/view.php?id=5701" title="1920/ Bx B1 Projet Techno Web">B1 - projet Social Network  (techno web)</a>
+                <a class="dropdown-item" role="menuitem" href="https://moodle.ynov.com/course/view.php?id=7894" title="Bdx 19/20 Le grand prix">Le grand prix - B1 info</a>
+                <a class="dropdown-item" role="menuitem" href="https://moodle.ynov.com/course/view.php?id=5721" title="1920/ Bx Mooc Arduino">MOOC : Programmer un objet avec Arduino</a>
+                <a class="dropdown-item" role="menuitem" href="https://moodle.ynov.com/course/view.php?id=5738" title="19/20 Bx TOEIC">TOEIC - BORDEAUX 19/20</a>
+    </div>
+</li>
+                <li class="dropdown nav-item">
+    <a class="dropdown-toggle nav-link" id="drop-down-5e469eef13c445e469eeec7eaa8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" aria-controls="drop-down-menu-5e469eef13c445e469eeec7eaa8">
+        Informations Moodle
+    </a>
+    <div class="dropdown-menu" role="menu" id="drop-down-menu-5e469eef13c445e469eeec7eaa8" aria-labelledby="drop-down-5e469eef13c445e469eeec7eaa8">
+                <a class="dropdown-item" role="menuitem" href="https://moodle.ynov.com/course/view.php?id=2187" title=" Espace Etudiant"> Espace Etudiant</a>
+                <a class="dropdown-item" role="menuitem" href="https://moodle.ynov.com/course/view.php?id=2188" title=" Espace Enseignant"> Espace Enseignant</a>
+                <a class="dropdown-item" role="menuitem" href="https://moodle.ynov.com/course/view.php?id=2622" title=" Enseigner avec Moodle"> Enseigner avec Moodle</a>
+    </div>
+</li>
+                <!-- page_heading_menu -->
+                
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <div class="d-none d-lg-block">
+                
+            </div>
+                <!-- navbar_plugin_output -->
+                <li class="nav-item">
+                <div class="popover-region collapsed popover-region-messages"
+    id="nav-message-popover-container" data-userid="7563"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        role="button"
+        aria-controls="popover-region-container-5e469eef145275e469eeec7eaa9"
+        aria-haspopup="true"
+        aria-label="Afficher la fenêtre des messages sans nouveau message"
+        tabindex="0">
+                <i class="icon fa fa-comment fa-fw "  title="Ouvrir/fermer le menu messages" aria-label="Ouvrir/fermer le menu messages"></i>
+        <div class="count-container hidden" data-region="count-container">0</div>
+
+    </div>
+    <div 
+        id="popover-region-container-5e469eef145275e469eeec7eaa9"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Fenêtre de notification"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Messages personnels</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <div class="newmessage-link">
+            <a href="https://moodle.ynov.com/message/index.php?contactsfirst=1">Nouveau message
+            </a>
+        </div>
+        <a class="mark-all-read-button"
+           href="#"
+           role="button"
+           title="Tout marquer comme lu"
+           data-action="mark-all-read">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw "  title="Tout marquer comme lu" aria-label="Tout marquer comme lu"></i></span>
+            <span class="loading-icon"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Chargement" aria-label="Chargement"></i></span>
+        </a>
+        <a href="https://moodle.ynov.com/message/edit.php?id=7563"
+           title="Préférences des messages">
+            <i class="icon fa fa-cog fa-fw "  title="Préférences des messages" aria-label="Préférences des messages"></i>
+        </a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="messages" data-region="messages" role="log" aria-busy="false" aria-atomic="false" aria-relevant="additions"></div>
+        <div class="empty-message" data-region="empty-message" tabindex="0">Aucun message</div>
+
+            </div>
+            <span class="loading-icon"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Chargement" aria-label="Chargement"></i></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://moodle.ynov.com/message/index.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">Tout afficher</div>
+                    </div>
+                </a>
+    </div>
+</div><div class="popover-region collapsed popover-region-notifications"
+    id="nav-notification-popover-container" data-userid="7563"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        role="button"
+        aria-controls="popover-region-container-5e469eef159ef5e469eeec7eaa10"
+        aria-haspopup="true"
+        aria-label="Afficher la fenêtre des notifications sans nouvelle notification"
+        tabindex="0">
+                <i class="icon fa fa-bell fa-fw "  title="Ouvrir/fermer le menu notifications" aria-label="Ouvrir/fermer le menu notifications"></i>
+        <div class="count-container hidden" data-region="count-container">0</div>
+
+    </div>
+    <div 
+        id="popover-region-container-5e469eef159ef5e469eeec7eaa10"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Fenêtre de notification"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notifications</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a class="mark-all-read-button"
+           href="#"
+           title="Tout marquer comme lu"
+           data-action="mark-all-read"
+           role="button">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw "  title="Tout marquer comme lu" aria-label="Tout marquer comme lu"></i></span>
+            <span class="loading-icon"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Chargement" aria-label="Chargement"></i></span>
+        </a>
+        <a href="https://moodle.ynov.com/message/notificationpreferences.php?userid=7563"
+           title="Préférences de notification">
+            <i class="icon fa fa-cog fa-fw "  title="Préférences de notification" aria-label="Préférences de notification"></i>
+        </a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications"
+            data-region="all-notifications"
+            role="log"
+            aria-busy="false"
+            aria-atomic="false"
+            aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">Vous n'avez pas de notification</div>
+
+            </div>
+            <span class="loading-icon"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Chargement" aria-label="Chargement"></i></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://moodle.ynov.com/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">Tout afficher</div>
+                    </div>
+                </a>
+    </div>
+</div>
+                </li>
+                <!-- user_menu -->
+                <li class="nav-item d-flex align-items-center">
+                    <div class="usermenu"><div class="action-menu moodle-actionmenu nowrap-items d-inline" id="action-menu-2" data-enhance="moodle-core-actionmenu">
+
+        <div class="menubar d-flex " id="action-menu-2-menubar" role="menubar">
+
+            
+
+
+                <div class="action-menu-trigger">
+                    <div class="dropdown">
+                        <a href="#" tabindex="0" class=" dropdown-toggle icon-no-margin" id="dropdown-2" aria-label="Menu utilisateur" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="action-menu-2-menu">
+                            
+                            <span class="userbutton"><span class="usertext mr-1">Nicolas DAYOT</span><span class="avatars"><span class="avatar current"><img src="https://moodle.ynov.com/theme/image.php/fordson/core/1579011570/u/f2" class="userpicture defaultuserpic" width="35" height="35" role="presentation" aria-hidden="true" /></span></span></span>
+                                
+                            <b class="caret"></b>
+                        </a>
+                            <div class="dropdown-menu dropdown-menu-right menu  align-tr-br" id="action-menu-2-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-2" role="menu" data-align="tr-br" id="dropdown-menu-2">
+                                        <a href="https://moodle.ynov.com/my/" class="dropdown-item menu-action" role="menuitem" data-title="mymoodle,admin" aria-labelledby="actionmenuaction-1">
+                                                <i class="icon fa fa-tachometer fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-1">
+                                                Tableau de bord
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                        <a href="https://moodle.ynov.com/user/profile.php?id=7563" class="dropdown-item menu-action" role="menuitem" data-title="profile,moodle" aria-labelledby="actionmenuaction-2">
+                                                <i class="icon fa fa-user fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-2">
+                                                Profil
+                                            </span>
+                                        </a>
+                                        <a href="https://moodle.ynov.com/message/index.php" class="dropdown-item menu-action" role="menuitem" data-title="messages,message" aria-labelledby="actionmenuaction-3">
+                                                <i class="icon fa fa-comment fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-3">
+                                                Messages personnels
+                                            </span>
+                                        </a>
+                                        <a href="https://moodle.ynov.com/user/preferences.php" class="dropdown-item menu-action" role="menuitem" data-title="preferences,moodle" aria-labelledby="actionmenuaction-4">
+                                                <i class="icon fa fa-wrench fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-4">
+                                                Préférences
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                        <a href="https://moodle.ynov.com/login/logout.php?sesskey=8pwqaHt6Us" class="dropdown-item menu-action" role="menuitem" data-title="logout,moodle" aria-labelledby="actionmenuaction-5">
+                                                <i class="icon fa fa-sign-out fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-5">
+                                                Déconnexion
+                                            </span>
+                                        </a>
+                            </div>
+                    </div>
+                </div>
+
+        </div>
+
+</div></div>
+                </li>
+            </ul>
+            <!-- search_box -->
+    </nav>
+    
+
+        <div class="headerbkg"><div class="default" style="background-image: url(&quot;https://moodle.ynov.com/theme/image.php/fordson/theme/1579011570/headerbg&quot;); background-size: cover; background-position:center;
+                width: 100%; height: 100%;"></div></div>
+
+    <div id="page" class="container-fluid">
+
+        <div id="learningcontent">
+
+            <div class="headerlogo">
+                <img src="//moodle.ynov.com/pluginfile.php/1/theme_fordson/headerlogo/1579011570/logo.png" class="img-fluid" alt="Responsive image">
+            </div>
+        <div id="fordsoncarousel" class="carousel slide d-none d-sm-block" data-ride="carousel">
+
+  <ol class="carousel-indicators">
+    <li data-target="#fordsoncarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#fordsoncarousel" data-slide-to="1"></li>
+    <li data-target="#fordsoncarousel" data-slide-to="2"></li>
+  </ol>
+
+<div class="carousel-inner" role="listbox">
+
+    <div class="carousel-item active">
+      <div class="slide1image"></div>
+      <div class="carousel-caption d-none d-sm-block">
+        <h3>Bienvenue</h3>
+        <p><div class="text_to_html"><p>sur Moodle YNOV<br /></p></div></p>
+      </div>
+    </div>
+    
+    <div class="carousel-item">
+      <div class="slide2image"></div>
+      <div class="carousel-caption d-none d-sm-block">
+        <h3>Parcours vidéo en ligne</h3>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="slide3image"></div>
+      <div class="carousel-caption d-none d-sm-block">
+        <h3>Best in Class</h3>
+        <p><div class="text_to_html"><p>Parcours Soft skills, Office 365, outils collaboratifs, veille et préparation au TOEIC<br /></p></div></p>
+      </div>
+    </div>
+
+</div>
+    <a class="left carousel-control" href="#fordsoncarousel" role="button" data-slide="prev">
+      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#fordsoncarousel" role="button" data-slide="next">
+      <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+        <header id="page-header" class="row">
+    <div class="col-12 pt-3 pb-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="mr-auto">
+                    <a href="https://moodle.ynov.com/course/view.php?id=1"><div class="page-context-header"><div class="page-header-image"><a href="https://moodle.ynov.com/user/profile.php?id=7563"><img src="https://moodle.ynov.com/theme/image.php/fordson/core/1579011570/u/f1" class="userpicture defaultuserpic" width="100" height="100" alt="Avatar Nicolas DAYOT" title="Avatar Nicolas DAYOT" /></a></div><div class="page-header-headings"><h1>Nicolas DAYOT</h1></div></div></a>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div class="ml-auto d-flex">
+                        <div class="singlebutton">
+    <form method="post" action="https://moodle.ynov.com/my/index.php" >
+            <input type="hidden" name="edit" value="1">
+            <input type="hidden" name="sesskey" value="8pwqaHt6Us">
+        <button type="submit" class="btn btn-secondary"
+            id="single_button5e469eeec7eaa1"
+            title=""
+            >Modifier cette page</button>
+    </form>
+</div>
+                    </div>
+                    <div id="course-header">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div id="page-content" class="row">
+            <div id="region-main-box" class="col-12">
+                <section id="region-main" class="has-blocks">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <span class="notifications" id="user-notifications"></span>
+                            
+                            <div class="easyenrol">
+<form id="enrolform_easy" class="form-inline enrolform_easy text-xs-center" action="https://moodle.ynov.com/enrol/easy/index.php" method="post">
+    <div class="form-group">
+        <label class="sr-only" for="enrolform_course_code">Code d&#039;inscription</label>
+        <div class="input-group">
+            <input type="text" class="form-control" id="enrolform_course_code" name="enrolform_course_code" placeholder="Code d&#039;inscription">
+        </div>
+    </div>
+    <input type="hidden" name="sesskey" value="8pwqaHt6Us">
+    <input type="hidden" name="_qf__enrolform" value="1">
+    <button type="submit" class="btn btn-primary">S&#039;inscrire</button>
+</form>
+</div>
+<script src="https://moodle.ynov.com/enrol/easy/js/enrol_easy.js"></script>
+
+                            <div class="fpwonderbox">
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-12">
+
+
+
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+                            <div role="main"><span id="maincontent"></span><aside id="block-region-content" class="block-region" data-blockregion="content" data-droptarget="1"><a href="#sb-5" class="sr-only sr-only-focusable">Passer Vue d&#039;ensemble des onglets de cours</a>
+
+<section id="inst116232"
+     class=" block_course_overview block  card mb-3"
+     role="complementary"
+     data-block="course_overview"
+          aria-labelledby="instance-116232-header"
+     >
+
+    <div class="card-body">
+
+            <h5 id="instance-116232-header" class="card-title d-inline">Vue d'ensemble des onglets de cours</h5>
+
+
+        <div class="card-text content mt-3">
+            <div id="block-course-overview-5e469eef10aa15e469eeec7eaa5" class="block-course-overview" data-region="course-overview">
+
+
+    <ul id="block-course-overview-view-choices-5e469eef10aa15e469eeec7eaa5" class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link " href="#favourites" role="tab" data-toggle="tab" data-tabname="favourites">
+                Favoris
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#courses" role="tab" data-toggle="tab" data-tabname="courses">
+                Cours
+            </a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+            <div class="tab-pane " id="favourites" role="tabpanel">
+                <div class="course-list container-fluid">
+                         <div class="alert alert-warning">
+                             Aucun cours à afficher
+                         </div>
+                </div>
+            </div>
+            <div class="tab-pane show active" id="courses" role="tabpanel">
+                <div class="course-list container-fluid">
+                        <div id="course-5738" class="row courseovbox lead">
+                            <div class="col-sm-1 span1">
+                                    <a href="https://moodle.ynov.com/my?favourite=5738" class="favourite_icon text-primary" alt="Ajouter aux favoris">
+                                        <i class="icon fa fa-fw fa-star-o " title="Ajouter aux favoris"></i>
+                                    </a>
+                            </div>
+                            <div class="col-sm-8 span8">
+                                <strong><a  href="https://moodle.ynov.com/course/view.php?id=5738">TOEIC - BORDEAUX 19/20</a></strong><br />
+                                <small>Bordeaux</small>
+                            </div>
+                        </div>
+                        <div id="course-5702" class="row courseovbox lead">
+                            <div class="col-sm-1 span1">
+                                    <a href="https://moodle.ynov.com/my?favourite=5702" class="favourite_icon text-primary" alt="Ajouter aux favoris">
+                                        <i class="icon fa fa-fw fa-star-o " title="Ajouter aux favoris"></i>
+                                    </a>
+                            </div>
+                            <div class="col-sm-8 span8">
+                                <strong><a  href="https://moodle.ynov.com/course/view.php?id=5702">B1 - Projet infra SI</a></strong><br />
+                                <small>Bordeaux / INFO / B1</small>
+                            </div>
+                        </div>
+                        <div id="course-5701" class="row courseovbox lead">
+                            <div class="col-sm-1 span1">
+                                    <a href="https://moodle.ynov.com/my?favourite=5701" class="favourite_icon text-primary" alt="Ajouter aux favoris">
+                                        <i class="icon fa fa-fw fa-star-o " title="Ajouter aux favoris"></i>
+                                    </a>
+                            </div>
+                            <div class="col-sm-8 span8">
+                                <strong><a  href="https://moodle.ynov.com/course/view.php?id=5701">B1 - projet Social Network  (techno web)</a></strong><br />
+                                <small>Bordeaux / INFO / B1</small>
+                            </div>
+                        </div>
+                        <div id="course-5700" class="row courseovbox lead">
+                            <div class="col-sm-1 span1">
+                                    <a href="https://moodle.ynov.com/my?favourite=5700" class="favourite_icon text-primary" alt="Ajouter aux favoris">
+                                        <i class="icon fa fa-fw fa-star-o " title="Ajouter aux favoris"></i>
+                                    </a>
+                            </div>
+                            <div class="col-sm-8 span8">
+                                <strong><a  href="https://moodle.ynov.com/course/view.php?id=5700">B1 - Projet Premier logiciel (dev logiciel)</a></strong><br />
+                                <small>Bordeaux / INFO / B1</small>
+                            </div>
+                        </div>
+                        <div id="course-5733" class="row courseovbox lead">
+                            <div class="col-sm-1 span1">
+                                    <a href="https://moodle.ynov.com/my?favourite=5733" class="favourite_icon text-primary" alt="Ajouter aux favoris">
+                                        <i class="icon fa fa-fw fa-star-o " title="Ajouter aux favoris"></i>
+                                    </a>
+                            </div>
+                            <div class="col-sm-8 span8">
+                                <strong><a  href="https://moodle.ynov.com/course/view.php?id=5733">B1 - info compétences transverses</a></strong><br />
+                                <small>Bordeaux / INFO / B1</small>
+                            </div>
+                        </div>
+                        <div id="course-5723" class="row courseovbox lead">
+                            <div class="col-sm-1 span1">
+                                    <a href="https://moodle.ynov.com/my?favourite=5723" class="favourite_icon text-primary" alt="Ajouter aux favoris">
+                                        <i class="icon fa fa-fw fa-star-o " title="Ajouter aux favoris"></i>
+                                    </a>
+                            </div>
+                            <div class="col-sm-8 span8">
+                                <strong><a  href="https://moodle.ynov.com/course/view.php?id=5723">B1 - info - mini projets</a></strong><br />
+                                <small>Bordeaux / INFO / B1</small>
+                            </div>
+                        </div>
+                        <div id="course-7894" class="row courseovbox lead">
+                            <div class="col-sm-1 span1">
+                                    <a href="https://moodle.ynov.com/my?favourite=7894" class="favourite_icon text-primary" alt="Ajouter aux favoris">
+                                        <i class="icon fa fa-fw fa-star-o " title="Ajouter aux favoris"></i>
+                                    </a>
+                            </div>
+                            <div class="col-sm-8 span8">
+                                <strong><a  href="https://moodle.ynov.com/course/view.php?id=7894">Le grand prix - B1 info</a></strong><br />
+                                <small>Bordeaux / INFO / Projets transversaux</small>
+                            </div>
+                        </div>
+                        <div id="course-5721" class="row courseovbox lead">
+                            <div class="col-sm-1 span1">
+                                    <a href="https://moodle.ynov.com/my?favourite=5721" class="favourite_icon text-primary" alt="Ajouter aux favoris">
+                                        <i class="icon fa fa-fw fa-star-o " title="Ajouter aux favoris"></i>
+                                    </a>
+                            </div>
+                            <div class="col-sm-8 span8">
+                                <strong><a  href="https://moodle.ynov.com/course/view.php?id=5721">MOOC : Programmer un objet avec Arduino</a></strong><br />
+                                <small>Bordeaux / INFO / Projets transversaux</small>
+                            </div>
+                        </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="dialogue_container" style="display: none">
+    </div>
+
+    <div class="overview-help">
+        <a class="btn btn-link p-0" role="button"
+    data-container="body" data-toggle="popover"
+    data-placement="right" data-content="&lt;div class=&quot;no-overflow&quot;&gt;&lt;p&gt;&#039;Modifier cette page&#039;, puis glisser et déposer les cours pour les réordonner. Cliquer les icônes d&#039;activités pour une vue d&#039;ensemble.&lt;/p&gt;
+&lt;/div&gt; "
+    data-html="true" tabindex="0" data-trigger="focus">
+  <i class="icon fa fa-question-circle text-info fa-fw "  title="Aide sur ceci" aria-label="Aide sur ceci"></i>
+</a>
+    </div>
+</div>
+            <div class="footer"></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-5"></span></aside></div>
+                            <div class="markettiles">
+    <div class="container-fluid">
+    <div class="row">
+
+
+        <div class="col-md-4">
+        <div class="market-tile"> 
+            <h3 class="card-title">Office 365</h3>
+            <div class="marketcontent marketing1image">
+            <p><p>
+            </div>
+            <a href = 'https://moodle.ynov.com/course/view.php?id=2175' title = 'En savoir plus' alt='En savoir plus' class='btn btn-primary' target='_self'> En savoir plus </a>
+        </div>
+        </div>
+
+
+        <div class="col-md-4">
+        <div class="market-tile"> 
+            <h3 class="card-title">Formations par thème</h3>
+            <div class="marketcontent marketing2image">
+            <p><p>
+            </div>
+            <a href = 'https://moodle.ynov.com/course/view.php?id=2185' title = 'En savoir plus' alt='En savoir plus' class='btn btn-primary' target='_self'> En savoir plus </a>
+        </div>
+        </div>
+
+
+        <div class="col-md-4">
+        <div class="market-tile"> 
+            <h3 class="card-title">Outils collaboratifs</h3>
+            <div class="marketcontent marketing3image">
+            <p><p>
+            </div>
+            <a href = 'https://moodle.ynov.com/course/view.php?id=2176' title = 'En savoir plus' alt='En savoir plus' class='btn btn-primary' target='_self'> En savoir plus </a>
+        </div>
+        </div>
+
+
+        <div class="col-md-4">
+        <div class="market-tile"> 
+            <h3 class="card-title">Entrainement au TOEIC</h3>
+            <div class="marketcontent marketing4image">
+            <p><p>
+            </div>
+            <a href = 'https://moodle.ynov.com/course/view.php?id=2366' title = 'En savoir plus' alt='En savoir plus' class='btn btn-primary' target='_self'> En savoir plus </a>
+        </div>
+        </div>
+
+
+        <div class="col-md-4">
+        <div class="market-tile"> 
+            <h3 class="card-title">Stage &amp; emploi</h3>
+            <div class="marketcontent marketing5image">
+            <p><p>
+            </div>
+            <a href = 'https://moodle.ynov.com/course/view.php?id=2174' title = 'En savoir plus' alt='En savoir plus' class='btn btn-primary' target='_self'> En savoir plus </a>
+        </div>
+        </div>
+
+
+        <div class="col-md-4">
+        <div class="market-tile"> 
+            <h3 class="card-title">Veille et recherche d'info</h3>
+            <div class="marketcontent marketing6image">
+            <p><p>
+            </div>
+            <a href = 'https://moodle.ynov.com/course/view.php?id=2177' title = 'En savoir plus' alt='En savoir plus' class='btn btn-primary' target='_self'> En savoir plus </a>
+        </div>
+        </div>
+
+
+    </div>
+    </div>
+</div>
+<div style="clear:both;"></div>
+                            
+                        </div>
+                    </div>
+                </section>
+
+                    <section data-region="blocks-column" class="hidden-print">
+                        <aside id="block-region-side-pre" class="block-region" data-blockregion="side-pre" data-droptarget="1"><a href="#sb-1" class="sr-only sr-only-focusable">Passer RECHERCHER UN COURS</a>
+
+<section id="inst116234"
+     class=" block_html block  card mb-3"
+     role="complementary"
+     data-block="html"
+          aria-labelledby="instance-116234-header"
+     >
+
+    <div class="card-body">
+
+            <h5 id="instance-116234-header" class="card-title d-inline">RECHERCHER UN COURS</h5>
+
+
+        <div class="card-text content mt-3">
+            <div class="no-overflow"><form id="coursesearch" action="https://moodle.ynov.com/course/search.php" method="get"><input placeholder="Nom du module" id="coursesearchbox" name="search" value="" type="text"> <button type="submit" class="btn  btn-info">ok</button></form></div>
+            <div class="footer"></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-1"></span><a href="#sb-2" class="sr-only sr-only-focusable">Passer Calendrier</a>
+
+<section id="inst116229"
+     class=" block_calendar_month block  card mb-3"
+     role="complementary"
+     data-block="calendar_month"
+          aria-labelledby="instance-116229-header"
+     >
+
+    <div class="card-body">
+
+            <h5 id="instance-116229-header" class="card-title d-inline">Calendrier</h5>
+
+
+        <div class="card-text content mt-3">
+            <div id="calendar-month-2020-February-5e469eeee46575e469eeec7eaa2"  data-template="core_calendar/month_mini"  data-includenavigation="true" data-mini="true">
+    <div id="month-mini-2020-February-5e469eeee46575e469eeec7eaa2" class="calendarwrapper" data-courseid="1" data-categoryid="0" data-month="2" data-year="2020" data-view="month">
+        <span class="overlay-icon-container hidden" data-region="overlay-icon-container">
+            <span class="loading-icon"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Chargement" aria-label="Chargement"></i></span>
+        </span>
+        <table class="minicalendar calendartable">
+            <caption class="calendar-controls">
+                    <a href="#" class="arrow_link previous" title="Mois précédent" data-year="2020" data-month="1">
+                        <span class="arrow">&#x25C4;</span>
+                    </a>
+                    <span class="hide"> | </span>
+                    <span class="current">
+                        <a href="https://moodle.ynov.com/calendar/view.php?view=month&time=1581686510" title="Ce mois">février 2020</a>
+                    </span>
+                    <span class="hide"> | </span>
+                    <a href="#" class="arrow_link next" title="Mois prochain" data-year="2020" data-month="3">
+                        <span class="arrow">&#x25BA;</span>
+                    </a>
+            </caption>
+            <thead>
+              <tr>
+                    <th class="header text-xs-center" scope="col">
+                        <abbr title="Lundi">Lu</abbr>
+                    </th>
+                    <th class="header text-xs-center" scope="col">
+                        <abbr title="Mardi">Ma</abbr>
+                    </th>
+                    <th class="header text-xs-center" scope="col">
+                        <abbr title="Mercredi">Me</abbr>
+                    </th>
+                    <th class="header text-xs-center" scope="col">
+                        <abbr title="Jeudi">Je</abbr>
+                    </th>
+                    <th class="header text-xs-center" scope="col">
+                        <abbr title="Vendredi">Ve</abbr>
+                    </th>
+                    <th class="header text-xs-center" scope="col">
+                        <abbr title="Samedi">Sa</abbr>
+                    </th>
+                    <th class="header text-xs-center" scope="col">
+                        <abbr title="Dimanche">Di</abbr>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-region="month-view-week">
+                        <td class="dayblank">&nbsp;</td>
+                        <td class="dayblank">&nbsp;</td>
+                        <td class="dayblank">&nbsp;</td>
+                        <td class="dayblank">&nbsp;</td>
+                        <td class="dayblank">&nbsp;</td>
+                        <td class="day text-center weekend" data-day-timestamp="1580511600">
+                                1
+                            </td>
+                        <td class="day text-center weekend" data-day-timestamp="1580598000">
+                                2
+                            </td>
+                </tr>
+                <tr data-region="month-view-week">
+                        <td class="day text-center" data-day-timestamp="1580684400">
+                                3
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1580770800">
+                                4
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1580857200">
+                                5
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1580943600">
+                                6
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1581030000">
+                                7
+                            </td>
+                        <td class="day text-center weekend" data-day-timestamp="1581116400">
+                                8
+                            </td>
+                        <td class="day text-center weekend" data-day-timestamp="1581202800">
+                                9
+                            </td>
+                </tr>
+                <tr data-region="month-view-week">
+                        <td class="day text-center" data-day-timestamp="1581289200">
+                                10
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1581375600">
+                                11
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1581462000">
+                                12
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1581548400">
+                                13
+                            </td>
+                        <td class="day text-center today" data-day-timestamp="1581634800">
+                                    <a  id="calendar-day-popover-link-1-2020-44-5e469eeee46575e469eeec7eaa2" href="https://moodle.ynov.com/calendar/view.php?view=day&amp;time=1581634800" data-container="body" data-toggle="popover" data-html="true" data-trigger="hover" data-placement="top" data-title="Aujourd&#039;hui vendredi 14 février" data-alternate="Pas d'événement">14</a>
+    <div class="hidden">
+        
+    </div>
+                            </td>
+                        <td class="day text-center weekend" data-day-timestamp="1581721200">
+                                15
+                            </td>
+                        <td class="day text-center weekend" data-day-timestamp="1581807600">
+                                16
+                            </td>
+                </tr>
+                <tr data-region="month-view-week">
+                        <td class="day text-center" data-day-timestamp="1581894000">
+                                17
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1581980400">
+                                18
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1582066800">
+                                19
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1582153200">
+                                20
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1582239600">
+                                21
+                            </td>
+                        <td class="day text-center weekend" data-day-timestamp="1582326000">
+                                22
+                            </td>
+                        <td class="day text-center weekend" data-day-timestamp="1582412400">
+                                23
+                            </td>
+                </tr>
+                <tr data-region="month-view-week">
+                        <td class="day text-center" data-day-timestamp="1582498800">
+                                24
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1582585200">
+                                25
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1582671600">
+                                26
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1582758000">
+                                27
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1582844400">
+                                28
+                            </td>
+                        <td class="day text-center weekend" data-day-timestamp="1582930800">
+                                29
+                            </td>
+                        <td class="dayblank">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+            <div class="footer"></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-2"></span><a href="#sb-3" class="sr-only sr-only-focusable">Passer ACCÈS PAR CAMPUS</a>
+
+<section id="inst116233"
+     class=" block_html block  card mb-3"
+     role="complementary"
+     data-block="html"
+          aria-labelledby="instance-116233-header"
+     >
+
+    <div class="card-body">
+
+            <h5 id="instance-116233-header" class="card-title d-inline">ACCÈS PAR CAMPUS</h5>
+
+
+        <div class="card-text content mt-3">
+            <div class="no-overflow"><p></p><p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; <a href="https://moodle.ynov.com/course/index.php?categoryid=31">Aix-en-Provence</a></p>
+<p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; <a href="https://moodle.ynov.com/course/index.php?categoryid=222">Bordeaux</a></p>
+<p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; <a href="https://moodle.ynov.com/course/index.php?categoryid=57">Lyon</a></p>
+<p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; <a href="https://moodle.ynov.com/course/index.php?categoryid=144">Nantes</a></p>
+<p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; <a href="https://moodle.ynov.com/course/index.php?categoryid=82">Paris</a></p>
+<p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; <a href="https://moodle.ynov.com/course/index.php?categoryid=67">Toulouse</a></p><p><a href="https://moodle.ynov.com/course/index.php?categoryid=225">ARCHIVES COURS</a></p></div>
+            <div class="footer"></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-3"></span><a href="#sb-4" class="sr-only sr-only-focusable">Passer Derniers badges</a>
+
+<section id="inst116228"
+     class=" block_badges block  card mb-3"
+     role="complementary"
+     data-block="badges"
+          aria-labelledby="instance-116228-header"
+     >
+
+    <div class="card-body">
+
+            <h5 id="instance-116228-header" class="card-title d-inline">Derniers badges</h5>
+
+
+        <div class="card-text content mt-3">
+            Vous n'avez pas de badge à afficher
+            <div class="footer"></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-4"></span></aside>
+                    </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="nav-drawer" data-region="drawer" class="d-print-none moodle-has-zindex closed" aria-hidden="true" tabindex="-1">
+    <nav class="list-group">
+        <a class="list-group-item list-group-item-action active" href="https://moodle.ynov.com/my/" data-key="myhome" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0" data-preceedwithhr="0" >
+            <div class="m-l-0">
+                <div class="media">
+                    <span class="media-left">
+                        <i class="icon fa fa-tachometer fa-fw " aria-hidden="true"  ></i>
+                    </span>
+                    <span class="media-body font-weight-bold">Tableau de bord</span>
+                </div>
+            </div>
+        </a>
+        <a class="list-group-item list-group-item-action " href="https://moodle.ynov.com/?redirect=0" data-key="home" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="myhome">
+            <div class="m-l-0">
+                <div class="media">
+                    <span class="media-left">
+                        <i class="icon fa fa-home fa-fw " aria-hidden="true"  ></i>
+                    </span>
+                    <span class="media-body ">Accueil du site</span>
+                </div>
+            </div>
+        </a>
+        <a class="list-group-item list-group-item-action " href="https://moodle.ynov.com/calendar/view.php?view=month" data-key="calendar" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="1">
+            <div class="m-l-0">
+                <div class="media">
+                    <span class="media-left">
+                        <i class="icon fa fa-calendar fa-fw " aria-hidden="true"  ></i>
+                    </span>
+                    <span class="media-body ">Calendrier</span>
+                </div>
+            </div>
+        </a>
+        <a class="list-group-item list-group-item-action " href="https://moodle.ynov.com/user/files.php" data-key="privatefiles" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="1">
+            <div class="m-l-0">
+                <div class="media">
+                    <span class="media-left">
+                        <i class="icon fa fa-file-o fa-fw " aria-hidden="true"  ></i>
+                    </span>
+                    <span class="media-body ">Fichiers personnels</span>
+                </div>
+            </div>
+        </a>
+        <div class="list-group-item" data-key="mycourses" data-isexpandable="1" data-indent="0" data-showdivider="0" data-type="0" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="myhome">
+            <div class="m-l-0">
+                <div class="media">
+                    <span class="media-left">
+                        <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  ></i>
+                    </span>
+                    <span class="media-body">Mes cours</span>
+                </div>
+            </div>
+        </div>
+        <a class="list-group-item list-group-item-action " href="https://moodle.ynov.com/course/view.php?id=5702" data-key="5702" data-isexpandable="1" data-indent="1" data-showdivider="0" data-type="20" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="mycourses">
+            <div class="m-l-1">
+                <div class="media">
+                    <span class="media-left">
+                        <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  ></i>
+                    </span>
+                    <span class="media-body ">1920/ Bx B1 Projet Infra SI</span>
+                </div>
+            </div>
+        </a>
+        <a class="list-group-item list-group-item-action " href="https://moodle.ynov.com/course/view.php?id=5701" data-key="5701" data-isexpandable="1" data-indent="1" data-showdivider="0" data-type="20" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="mycourses">
+            <div class="m-l-1">
+                <div class="media">
+                    <span class="media-left">
+                        <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  ></i>
+                    </span>
+                    <span class="media-body ">1920/ Bx B1 Projet Techno Web</span>
+                </div>
+            </div>
+        </a>
+        <a class="list-group-item list-group-item-action " href="https://moodle.ynov.com/course/view.php?id=5700" data-key="5700" data-isexpandable="1" data-indent="1" data-showdivider="0" data-type="20" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="mycourses">
+            <div class="m-l-1">
+                <div class="media">
+                    <span class="media-left">
+                        <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  ></i>
+                    </span>
+                    <span class="media-body ">1920/ Bx B1 Projet Dev Logiciel</span>
+                </div>
+            </div>
+        </a>
+        <a class="list-group-item list-group-item-action " href="https://moodle.ynov.com/course/view.php?id=5733" data-key="5733" data-isexpandable="1" data-indent="1" data-showdivider="0" data-type="20" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="mycourses">
+            <div class="m-l-1">
+                <div class="media">
+                    <span class="media-left">
+                        <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  ></i>
+                    </span>
+                    <span class="media-body ">1920/ Bx B1 compétences transverses</span>
+                </div>
+            </div>
+        </a>
+        <a class="list-group-item list-group-item-action " href="https://moodle.ynov.com/course/view.php?id=5723" data-key="5723" data-isexpandable="1" data-indent="1" data-showdivider="0" data-type="20" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="mycourses">
+            <div class="m-l-1">
+                <div class="media">
+                    <span class="media-left">
+                        <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  ></i>
+                    </span>
+                    <span class="media-body ">1920/ Bx B1 info MP</span>
+                </div>
+            </div>
+        </a>
+        <a class="list-group-item list-group-item-action " href="https://moodle.ynov.com/course/view.php?id=7894" data-key="7894" data-isexpandable="1" data-indent="1" data-showdivider="0" data-type="20" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="mycourses">
+            <div class="m-l-1">
+                <div class="media">
+                    <span class="media-left">
+                        <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  ></i>
+                    </span>
+                    <span class="media-body ">Bdx 19/20 Le grand prix</span>
+                </div>
+            </div>
+        </a>
+        <a class="list-group-item list-group-item-action " href="https://moodle.ynov.com/course/view.php?id=5721" data-key="5721" data-isexpandable="1" data-indent="1" data-showdivider="0" data-type="20" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="mycourses">
+            <div class="m-l-1">
+                <div class="media">
+                    <span class="media-left">
+                        <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  ></i>
+                    </span>
+                    <span class="media-body ">1920/ Bx Mooc Arduino</span>
+                </div>
+            </div>
+        </a>
+    </nav>
+</div>
+</div>
+
+
+<a href="#" id="back-to-top" class="btn btn-primary btn-lg" role="button" title="Retour en haut de page et Scrollspy"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
+
+
+
+<footer id="page-footer" class="py-3 text-light">
+    <div class="container">
+
+        <div id="course-footer"></div>
+
+        <div class="row">
+
+                <div class="col-md-8">
+                    
+
+                    <div class="logininfo">Connecté sous le nom « <a href="https://moodle.ynov.com/user/profile.php?id=7563" title="Consulter le profil">Nicolas DAYOT</a> » (<a href="https://moodle.ynov.com/login/logout.php?sesskey=8pwqaHt6Us">Déconnexion</a>)</div>
+
+                    <div class="homelink"><a href="https://moodle.ynov.com/">Accueil</a></div><div id="customfotter">Powered by <a href="http://www.enovation.ie" target="_blank">Enovation</a></div>
+
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="brandbox">
+
+                        <h3>YNOV</h3>
+                            <ul class="footercontact">
+                                <li><i class="fa fa-globe"></i>  https://www.ynov.com</li>
+                                
+                                
+                            </ul>
+
+                        <div class="socials_wrapper">
+        <ul class="socials">
+                    <a href = https://www.facebook.com/ynov.campus class = "socialicon blog" title = "https://www.facebook.com/ynov.campus" alt="https://www.facebook.com/ynov.campus" target="_blank">
+                    <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-inverse fa-stack-1x"></i>
+                    </span>
+                    <span class="sr-only">https://www.facebook.com/ynov.campus</span>
+                    </a>
+                    <a href = https://twitter.com/ynovcampus class = "socialicon blog" title = "https://twitter.com/ynovcampus" alt="https://twitter.com/ynovcampus" target="_blank">
+                    <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-inverse fa-stack-1x"></i>
+                    </span>
+                    <span class="sr-only">https://twitter.com/ynovcampus</span>
+                    </a>
+                    <a href = https://www.youtube.com/user/ynovformations class = "socialicon blog" title = "https://www.youtube.com/user/ynovformations" alt="https://www.youtube.com/user/ynovformations" target="_blank">
+                    <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-inverse fa-stack-1x"></i>
+                    </span>
+                    <span class="sr-only">https://www.youtube.com/user/ynovformations</span>
+                    </a>
+                    <a href = https://www.ynov.com class = "socialicon blog" title = "https://www.ynov.com" alt="https://www.ynov.com" target="_blank">
+                    <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-globe fa-inverse fa-stack-1x"></i>
+                    </span>
+                    <span class="sr-only">https://www.ynov.com</span>
+                    </a>
+        </ul>
+    </div>
+
+                    </div>
+                </div>
+
+        </div>
+        <nav class="nav navbar-nav d-md-none">
+                <ul class="list-unstyled pt-3">
+                                    <li>Informations Moodle</li>
+                                <li>
+                                    <ul class="list-unstyled ml-3">
+                                                        <li><a href="https://moodle.ynov.com/course/view.php?id=2187" title=" Espace Etudiant"> Espace Etudiant</a></li>
+                                                        <li><a href="https://moodle.ynov.com/course/view.php?id=2188" title=" Espace Enseignant"> Espace Enseignant</a></li>
+                                                        <li><a href="https://moodle.ynov.com/course/view.php?id=2622" title=" Enseigner avec Moodle"> Enseigner avec Moodle</a></li>
+                                    </ul>
+                                </li>
+                </ul>
+        </nav>
+        <div class="tool_dataprivacy"><a href="https://moodle.ynov.com/admin/tool/dataprivacy/summary.php">Résumé de conservation de données</a></div>
+        <script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'https://moodle.ynov.com/lib/requirejs.php/1579011570/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://moodle.ynov.com/lib/javascript.php/1579011570/lib/jquery/jquery-3.2.1.min',
+        jqueryui: 'https://moodle.ynov.com/lib/javascript.php/1579011570/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://moodle.ynov.com/lib/javascript.php/1579011570/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="https://moodle.ynov.com/lib/javascript.php/1579011570/lib/requirejs/require.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.util.js_pending("core/first");require(['core/first'], function() {
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://moodle.ynov.com/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage("fr",{
+ "Audio Player": "Lecteur audio",
+ "Video Player": "Lecteur vidéo",
+ "Play": "Lecture",
+ "Pause": "Pause",
+ "Replay": "Revoir",
+ "Current Time": "Temps actuel",
+ "Duration Time": "Durée",
+ "Remaining Time": "Temps restant",
+ "Stream Type": "Type de flux",
+ "LIVE": "EN DIRECT",
+ "Loaded": "Chargé",
+ "Progress": "Progression",
+ "Progress Bar": "Barre de progression",
+ "progress bar timing: currentTime={1} duration={2}": "{1} de {2}",
+ "Fullscreen": "Plein écran",
+ "Non-Fullscreen": "Fenêtré",
+ "Mute": "Sourdine",
+ "Unmute": "Son activé",
+ "Playback Rate": "Vitesse de lecture",
+ "Subtitles": "Sous-titres",
+ "subtitles off": "Sous-titres désactivés",
+ "Captions": "Sous-titres transcrits",
+ "captions off": "Sous-titres transcrits désactivés",
+ "Chapters": "Chapitres",
+ "Descriptions": "Descriptions",
+ "descriptions off": "descriptions désactivées",
+ "Audio Track": "Piste audio",
+ "Volume Level": "Niveau de volume",
+ "You aborted the media playback": "Vous avez interrompu la lecture de la vidéo.",
+ "A network error caused the media download to fail part-way.": "Une erreur de réseau a interrompu le téléchargement de la vidéo.",
+ "The media could not be loaded, either because the server or network failed or because the format is not supported.": "Cette vidéo n'a pas pu être chargée, soit parce que le serveur ou le réseau a échoué ou parce que le format n'est pas reconnu.",
+ "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "La lecture de la vidéo a été interrompue à cause d'un problème de corruption ou parce que la vidéo utilise des fonctionnalités non prises en charge par votre navigateur.",
+ "No compatible source was found for this media.": "Aucune source compatible n'a été trouvée pour cette vidéo.",
+ "The media is encrypted and we do not have the keys to decrypt it.": "Le média est chiffré et nous n'avons pas les clés pour le déchiffrer.",
+ "Play Video": "Lire la vidéo",
+ "Close": "Fermer",
+ "Close Modal Dialog": "Fermer la boîte de dialogue modale",
+ "Modal Window": "Fenêtre modale",
+ "This is a modal window": "Ceci est une fenêtre modale",
+ "This modal can be closed by pressing the Escape key or activating the close button.": "Ce modal peut être fermé en appuyant sur la touche Échap ou activer le bouton de fermeture.",
+ ", opens captions settings dialog": ", ouvrir les paramètres des sous-titres transcrits",
+ ", opens subtitles settings dialog": ", ouvrir les paramètres des sous-titres",
+ ", opens descriptions settings dialog": ", ouvrir les paramètres des descriptions",
+ ", selected": ", sélectionné",
+ "captions settings": "Paramètres des sous-titres transcrits",
+ "subtitles settings": "Paramètres des sous-titres",
+ "descriptions settings": "Paramètres des descriptions",
+ "Text": "Texte",
+ "White": "Blanc",
+ "Black": "Noir",
+ "Red": "Rouge",
+ "Green": "Vert",
+ "Blue": "Bleu",
+ "Yellow": "Jaune",
+ "Magenta": "Magenta",
+ "Cyan": "Cyan",
+ "Background": "Arrière-plan",
+ "Window": "Fenêtre",
+ "Transparent": "Transparent",
+ "Semi-Transparent": "Semi-transparent",
+ "Opaque": "Opaque",
+ "Font Size": "Taille des caractères",
+ "Text Edge Style": "Style des contours du texte",
+ "None": "Aucun",
+ "Raised": "Élevé",
+ "Depressed": "Enfoncé",
+ "Uniform": "Uniforme",
+ "Dropshadow": "Ombre portée",
+ "Font Family": "Famille de polices",
+ "Proportional Sans-Serif": "Polices à chasse variable sans empattement (Proportional Sans-Serif)",
+ "Monospace Sans-Serif": "Polices à chasse fixe sans empattement (Monospace Sans-Serif)",
+ "Proportional Serif": "Polices à chasse variable avec empattement (Proportional Serif)",
+ "Monospace Serif": "Polices à chasse fixe avec empattement (Monospace Serif)",
+ "Casual": "Manuscrite",
+ "Script": "Scripte",
+ "Small Caps": "Petites capitales",
+ "Reset": "Réinitialiser",
+ "restore all settings to the default values": "Restaurer tous les paramètres aux valeurs par défaut",
+ "Done": "Terminé",
+ "Caption Settings Dialog": "Boîte de dialogue des paramètres des sous-titres transcrits",
+ "Beginning of dialog window. Escape will cancel and close the window.": "Début de la fenêtre de dialogue. La touche d'échappement annulera et fermera la fenêtre.",
+ "End of dialog window.": "Fin de la fenêtre de dialogue."
+});
+
+    });
+});;
+
+require(['jquery'], function($) {
+    require(['theme_boost/popover'], function() {
+        var target = $("#calendar-day-popover-link-1-2020-44-5e469eeee46575e469eeec7eaa2");
+        target.popover({
+            content: function() {
+                var source = target.next().find("> *:not('.hidden')");
+                var content = $('<div>');
+
+                if (source.length) {
+                    content.html(source.clone(false));
+                } else {
+                    content.html(target.data('alternate'));
+                }
+
+                return content.html();
+            }
+        });
+    });
+});
+;
+
+require([
+    'jquery',
+    'core_calendar/selectors',
+    'core_calendar/events',
+], function(
+    $,
+    CalendarSelectors,
+    CalendarEvents
+) {
+
+    $('body').on(CalendarEvents.filterChanged, function(e, data) {
+        M.util.js_pending("month-mini-5e469eeee46575e469eeec7eaa2-filterChanged");
+        // A filter value has been changed.
+        // Find all matching cells in the popover data, and hide them.
+        $("#month-mini-2020-February-5e469eeee46575e469eeec7eaa2")
+            .find(CalendarSelectors.popoverType[data.type])
+            .toggleClass('hidden', !!data.hidden);
+        M.util.js_complete("month-mini-5e469eeee46575e469eeec7eaa2-filterChanged");
+    });
+});
+;
+
+require(['jquery', 'core_calendar/calendar_mini'], function($, CalendarMini) {
+    CalendarMini.init($("#calendar-month-2020-February-5e469eeee46575e469eeec7eaa2"), !0);
+});
+;
+
+require(['jquery'], function($) {
+    $('#single_select5e469eeec7eaa4').change(function() {
+        var ignore = $(this).find(':selected').attr('data-ignore');
+        if (typeof ignore === typeof undefined) {
+            $('#single_select_f5e469eeec7eaa3').submit();
+        }
+    });
+});
+;
+
+        require(['jquery', 'block_course_overview/popup'], function($, Popup) {
+            Popup.init(0);
+        });
+    ;
+
+require(['jquery', 'message_popup/message_popover_controller'], function($, controller) {
+    var container = $('#nav-message-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+require(['theme_boost/loader']);
+require(['jquery','theme_boost/tooltip'], function($){$('[data-tooltip="tooltip"]').tooltip()});
+require(['theme_boost/drawer'], function(mod) {
+    mod.init();
+});
+;
+M.util.js_pending('core/notification');
+require(['core/notification'], function(amd) {
+    amd.init(129184, []);
+    M.util.js_complete('core/notification');
+});;
+M.util.js_pending('core/log');
+require(['core/log'], function(amd) {
+    amd.setConfig({"level":"warn"});
+    M.util.js_complete('core/log');
+});M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script type="text/javascript" src="https://moodle.ynov.com/lib/javascript.php/1579011570/theme/fordson/javascript/scrolltotop.js"></script>
+<script type="text/javascript" src="https://moodle.ynov.com/lib/javascript.php/1579011570/theme/fordson/javascript/tooltipfix.js"></script>
+<script type="text/javascript" src="https://moodle.ynov.com/lib/javascript.php/1579011570/theme/fordson/javascript/blockslider.js"></script>
+<script type="text/javascript" src="https://moodle.ynov.com/lib/javascript.php/1579011570/theme/fordson/javascript/courseblock.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Modifi\u00e9 le","name":"Nom","error":"Erreur","info":"Information","yes":"Oui","no":"Non","ok":"OK","cancel":"Annuler","confirm":"Confirmer","areyousure":"En \u00eates-vous bien s\u00fbr\u00a0?","closebuttontitle":"Fermer","unknownerror":"Erreur inconnue"},"repository":{"type":"Type","size":"Taille","invalidjson":"Cha\u00eene JSON non valide","nofilesattached":"Aucun fichier joint","filepicker":"S\u00e9lecteur de fichiers","logout":"D\u00e9connexion","nofilesavailable":"Aucun fichier disponible","norepositoriesavailable":"D\u00e9sol\u00e9, aucun de vos d\u00e9p\u00f4ts actuels ne peut retourner de fichiers dans le format requis.","fileexistsdialogheader":"Le fichier existe","fileexistsdialog_editor":"Un fichier de ce nom a d\u00e9j\u00e0 \u00e9t\u00e9 joint au texte que vous modifiez.","fileexistsdialog_filemanager":"Un fichier de ce nom a d\u00e9j\u00e0 \u00e9t\u00e9 joint","renameto":"Renommer \u00e0 \u00ab\u00a0{$a}\u00a0\u00bb","referencesexist":"Ce fichier est utilis\u00e9 comme source par {$a} alias.","select":"S\u00e9lectionnez"},"admin":{"confirmdeletecomments":"Voulez-vous vraiment supprimer des commentaires\u00a0?","confirmation":"Confirmation"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"fr"});
+});
+Y.use("moodle-filter_glossary-autolinker",function() {M.filter_glossary.init_filter_autolinking({"courseid":0});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random5e469eeec7eaa18'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random5e469eeec7eaa18'); });
+})();
+//]]>
+</script>
+
+
+    </div>
+
+</footer>
+
+</body>
+</html>

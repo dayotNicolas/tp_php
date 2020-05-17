@@ -1,0 +1,30 @@
+body {
+  background-color: darkblue;
+}
+#container {
+  width: 400px;
+  background-color: snow;
+  margin: 0 auto;
+  margin-top: 10%;
+  border-style: outset;
+  border-color: beige;
+  border-radius: 2%;
+}
+/* Bordered form */
+
+#container h1 {
+  margin: 0 auto;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: dodgerblue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}

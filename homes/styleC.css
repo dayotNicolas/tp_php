@@ -1,0 +1,58 @@
+body {
+  background-color: dodgerblue;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+}
+
+p {
+  color: beige;
+  font-size: larger;
+  margin-left: 30px;
+}
+
+h1 {
+  color: beige;
+  font-size: 56px;
+  text-align: center;
+}
+
+h2 {
+  color: beige;
+  font-size: xx-large;
+  margin-left: 220px;
+}
+
+#buttonP {
+  margin-left: 30px;
+}
+
+#profil {
+  border-color: beige;
+  border-style: outset;
+  background-color: darkblue;
+  border-radius: 2%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  width: 33%;
+}
+
+#offres {
+  border-color: beige;
+  border-style: outset;
+  border-radius: 2%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  width: 33%;
+}
+
+#button {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+}
+
+#uneoffre {
+  border-color: beige;
+  border-style: outset;
+}
